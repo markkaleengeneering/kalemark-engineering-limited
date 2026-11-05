@@ -3,790 +3,366 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kalemark Engineering Limited | Kitwe, Zambia</title>
-
-<meta name="description" content="Kalemark Engineering Limited offers engineering services, electronics repairs, CCTV installation, electrical repairs, IT services and general supply in Kitwe, Zambia.">
+<meta name="description" content="Kalemark Engineering Limited provides engineering, electronics repairs, CCTV installation, IT services and general supply in Kitwe, Zambia.">
+<meta name="theme-color" content="#102b55">
+<title>Kalemark Engineering Limited | Reliable Solutions</title>
 
 <style>
 :root {
-  --navy: #09234b;
-  --blue: #0755ad;
-  --silver: #9299a4;
-  --light: #f3f5f8;
-  --white: #ffffff;
+  --navy:#102b55;
+  --dark:#081b39;
+  --silver:#92969d;
+  --light:#f3f5f8;
+  --ink:#202938;
+  --muted:#667085;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.topbar{background:var(--dark);color:#fff;padding:9px 0;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 3px 18px #071b3812}
+.nav-wrap{min-height:145px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand img{width:230px;height:135px;object-fit:contain}
+nav{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:bold;color:#26364d}
+nav a:hover{color:var(--silver)}
+.nav-cta,.btn{display:inline-block;background:var(--navy);color:white;padding:12px 20px;border-radius:4px;font-weight:bold;border:0;cursor:pointer}
+.nav-cta:hover,.btn:hover{background:#244878}
+.menu-btn{display:none;background:var(--navy);color:white;border:0;padding:9px 13px;font-size:20px;border-radius:4px}
+
+.hero{
+ background:linear-gradient(90deg,rgba(6,22,47,.93),rgba(11,37,72,.72)),
+ url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;
+ color:white;padding:105px 0;
 }
+.hero-content{max-width:700px}
+.eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:bold;color:var(--silver);margin-bottom:12px}
+.hero .eyebrow{color:#d8dce3}
+h1{font-size:clamp(36px,5.2vw,62px);line-height:1.08;margin-bottom:22px}
+.hero p{font-size:18px;color:#e4e9f0;margin-bottom:28px;max-width:620px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn.light{background:white;color:var(--navy)}
+.btn.outline{background:transparent;border:1px solid white}
 
-html {
-  scroll-behavior: smooth;
+.section{padding:78px 0}
+.section.alt{background:var(--light)}
+.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+h2{font-size:clamp(28px,3.5vw,40px);line-height:1.2;color:var(--navy);margin-bottom:13px}
+.section-head p{color:var(--muted)}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-photo{min-height:370px;border-radius:8px;background:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1100&q=85') center/cover no-repeat}
+.about-copy p{color:var(--muted);margin-bottom:15px}
+.ticks{list-style:none;margin:20px 0 26px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ticks li:before{content:"✓";color:var(--navy);font-weight:bold;margin-right:9px}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card{background:white;border:1px solid #e6e9ee;border-radius:7px;overflow:hidden;transition:.25s}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #102b5515}
+.service-card img{width:100%;height:190px;object-fit:cover;background:#e7ebf0}
+.service-body{padding:22px}
+.service-body h3{color:var(--navy);font-size:19px;margin-bottom:9px}
+.service-body p{color:var(--muted);font-size:14px}
+
+.commitment{background:linear-gradient(120deg,var(--dark),var(--navy));color:white;padding:58px 0}
+.commitment-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.commitment h2{color:white}
+.commitment p{color:#d9e0eb;max-width:690px}
+
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+.value{background:white;padding:25px;border-radius:6px;border-top:3px solid var(--silver)}
+.value h3{color:var(--navy);margin-bottom:7px}
+.value p{font-size:14px;color:var(--muted)}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:6px}
+
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}
+.contact-info{background:var(--navy);color:white;padding:32px;border-radius:7px}
+.contact-info h3,.contact-form h3{font-size:23px;margin-bottom:15px}
+.contact-info p{color:#dbe3ef;margin-bottom:18px}
+.contact-line{padding:13px 0;border-bottom:1px solid #ffffff2b;font-size:14px;overflow-wrap:anywhere}
+.contact-line strong{display:block;color:white;margin-bottom:3px}
+.contact-form{background:white;border:1px solid #e5e8ed;padding:30px;border-radius:7px}
+.contact-form p{color:var(--muted);font-size:14px;margin-bottom:20px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea{width:100%;padding:13px 14px;border:1px solid #d9dee7;border-radius:4px;font:inherit;margin-bottom:14px;background:#fbfcfd}
+textarea{min-height:125px;resize:vertical}
+
+footer{background:#07172f;color:#d8dfeb;padding:28px 0;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.footer-inner strong{color:white}
+
+@media(max-width:850px){
+ nav{gap:12px}
+ .brand img{width:190px}
+ .services-grid{grid-template-columns:repeat(2,1fr)}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
 }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #263246;
-  line-height: 1.7;
+@media(max-width:650px){
+ .topbar .container{justify-content:center;text-align:center}
+ .nav-wrap{min-height:105px}
+ .brand img{width:165px;height:95px}
+ .menu-btn{display:block}
+ nav{display:none;position:absolute;left:0;right:0;top:105px;background:white;padding:18px 4%;box-shadow:0 12px 18px #071b3818;flex-direction:column;align-items:stretch;gap:0}
+ nav.open{display:flex}
+ nav a{padding:12px 4px;border-bottom:1px solid #edf0f4}
+ .nav-cta{margin-top:10px}
+ .hero{padding:75px 0}
+ .hero p{font-size:16px}
+ .section{padding:60px 0}
+ .services-grid,.values,.gallery-grid{grid-template-columns:1fr}
+ .service-card img{height:210px}
+ .commitment-inner{align-items:flex-start;flex-direction:column}
+ .ticks,.form-row{grid-template-columns:1fr}
+ .contact-info,.contact-form{padding:24px}
 }
-
-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.container {
-  width: 92%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* HEADER */
-
-header {
-  background: white;
-  padding: 12px 4%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,.10);
-}
-
-.logo {
-  width: 240px;
-  max-height: 80px;
-  object-fit: contain;
-}
-
-nav {
-  display: flex;
-  gap: 25px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--navy);
-  font-size: 13px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--blue);
-}
-
-/* HERO */
-
-.hero {
-  min-height: 490px;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(3,17,42,.96),
-      rgba(3,17,42,.78),
-      rgba(3,17,42,.18)
-    ),
-    url("https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1800&q=85")
-    center/cover no-repeat;
-
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
-.hero-content {
-  max-width: 680px;
-  padding: 75px 0;
-}
-
-.hero h1 {
-  font-size: clamp(34px,5vw,58px);
-  line-height: 1.18;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 17px;
-  color: #e0e7f0;
-  margin-bottom: 25px;
-}
-
-.button {
-  display: inline-block;
-  background: var(--blue);
-  color: white;
-  padding: 14px 28px;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.button:hover {
-  background: #064487;
-}
-
-/* SECTION TITLES */
-
-.section-title {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.section-title h2 {
-  color: var(--navy);
-  font-size: 31px;
-}
-
-.section-title span {
-  display: block;
-  height: 4px;
-  width: 60px;
-  background: var(--blue);
-  margin: 10px auto;
-}
-
-/* ABOUT */
-
-.about {
-  padding: 65px 0;
-  text-align: center;
-}
-
-.about p {
-  max-width: 900px;
-  margin: auto;
-  color: #596579;
-  font-size: 16px;
-}
-
-/* SERVICES */
-
-.services {
-  background: var(--light);
-  padding: 65px 0;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 24px;
-}
-
-.card {
-  background: white;
-  border-radius: 7px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,.07);
-  transition: transform .25s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  height: 220px;
-  object-fit: cover;
-  background: #e5e8ed;
-}
-
-.card-content {
-  padding: 22px;
-}
-
-.card h3 {
-  color: var(--navy);
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.card p {
-  color: #606b7b;
-  font-size: 14px;
-}
-
-/* SUPPLY FEATURE */
-
-.supply {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: var(--navy);
-  color: white;
-  margin-top: 45px;
-  border-radius: 7px;
-  overflow: hidden;
-}
-
-.supply img {
-  height: 100%;
-  min-height: 290px;
-}
-
-.supply-text {
-  padding: 45px;
-  align-self: center;
-}
-
-.supply-text h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-/* CONTACT */
-
-.contact {
-  padding: 65px 0;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
-
-.contact-box {
-  background: var(--light);
-  padding: 30px;
-  border-radius: 7px;
-  border-left: 4px solid var(--blue);
-}
-
-.contact-box h3 {
-  color: var(--navy);
-  margin-bottom: 18px;
-}
-
-.contact-box p {
-  margin-bottom: 12px;
-}
-
-.contact-box a {
-  color: var(--blue);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.whatsapp {
-  display: inline-block;
-  background: #168b53;
-  color: white !important;
-  padding: 12px 22px;
-  border-radius: 4px;
-  margin-top: 15px;
-}
-
-/* FOOTER */
-
-footer {
-  background: #061a38;
-  color: white;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.footer-logo {
-  max-width: 200px;
-  max-height: 85px;
-  object-fit: contain;
-  margin: 0 auto 15px;
-}
-
-footer p {
-  font-size: 13px;
-  color: #cbd3df;
-  margin-top: 8px;
-}
-
-/* MOBILE */
-
-@media(max-width: 800px) {
-
-  header {
-    flex-direction: column;
-    padding: 12px;
-  }
-
-  .logo {
-    width: 210px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 13px;
-    margin-top: 10px;
-  }
-
-  nav a {
-    font-size: 12px;
-  }
-
-  .service-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .supply {
-    grid-template-columns: 1fr;
-  }
-
-  .supply img {
-    height: 250px;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media(max-width: 480px) {
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card img {
-    height: 230px;
-  }
-
-  .hero {
-    min-height: 430px;
-  }
-
-  .hero h1 {
-    font-size: 35px;
-  }
-
-  .supply-text {
-    padding: 27px;
-  }
-
-  .section-title h2 {
-    font-size: 26px;
-  }
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<div class="topbar">
+ <div class="container">
+  <span>Kitwe, Copperbelt Province, Zambia</span>
+  <span>Reliable Solutions • Quality Service • Customer Satisfaction</span>
+ </div>
+</div>
 
 <header>
-
-  <a href="#home">
-    <img src="kalemark-logo.png"
-         class="logo"
-         alt="Kalemark Engineering Limited Logo">
+ <div class="container nav-wrap">
+  <a class="brand" href="#home" aria-label="Kalemark Engineering home">
+   <img src="kalemark-logo.png" alt="Kalemark Engineering Limited logo">
   </a>
 
-  <nav>
-    <a href="#home">HOME</a>
-    <a href="#about">ABOUT US</a>
-    <a href="#services">SERVICES</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
 
+  <nav id="mainNav">
+   <a href="#home">Home</a>
+   <a href="#about">About Us</a>
+   <a href="#services">Services</a>
+   <a href="#projects">Gallery</a>
+   <a href="#contact">Contact</a>
+   <a class="nav-cta" href="#contact">Get in Touch</a>
+  </nav>
+ </div>
 </header>
 
-<!-- HERO -->
+<main>
 
 <section class="hero" id="home">
-
-  <div class="container">
-
-    <div class="hero-content">
-
-      <h1>
-        ENGINEERING SOLUTIONS.
-        TECHNOLOGY THAT WORKS.
-      </h1>
-
-      <p>
-        Your trusted partner in engineering,
-        electronics repairs, CCTV installation,
-        electrical services, IT solutions
-        and general supply.
-      </p>
-
-      <a href="#services" class="button">
-        EXPLORE OUR SERVICES
-      </a>
-
-    </div>
-
+ <div class="container">
+  <div class="hero-content">
+   <div class="eyebrow">Kalemark Engineering Limited</div>
+   <h1>Practical Solutions.<br>Reliable Service.</h1>
+   <p>Your trusted partner for engineering support, electronic and appliance repairs, CCTV installation, IT services and general supply.</p>
+   <div class="hero-actions">
+    <a class="btn light" href="#services">Explore Our Services</a>
+    <a class="btn outline" href="#contact">Contact Us</a>
+   </div>
   </div>
-
+ </div>
 </section>
 
-<!-- ABOUT -->
-
-<section class="about container" id="about">
-
-  <div class="section-title">
-    <h2>ABOUT KALEMARK</h2>
-    <span></span>
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div class="about-photo" role="img" aria-label="Engineering professional working with technical equipment"></div>
+  <div class="about-copy">
+   <div class="eyebrow">Who We Are</div>
+   <h2>Engineering and technical services you can count on.</h2>
+   <p>Kalemark Engineering Limited is a Kitwe-based service provider committed to delivering dependable engineering, repair, installation and supply solutions to individuals, homes and businesses.</p>
+   <p>We bring together practical skills, customer-focused service and a commitment to quality in every assignment. Whether it is a repair, an installation or a supply requirement, our aim is to make the process straightforward and reliable.</p>
+   <ul class="ticks">
+    <li>Customer-focused service</li>
+    <li>Practical solutions</li>
+    <li>Quality workmanship</li>
+    <li>Reliable support</li>
+   </ul>
+   <a class="btn" href="#contact">Talk to Our Team</a>
   </div>
-
-  <p>
-    Kalemark Engineering Limited is an engineering
-    and technology services company based in Kitwe,
-    Copperbelt Province, Zambia.
-
-    We provide professional engineering services,
-    electronics repairs, CCTV camera installations,
-    electrical appliance repairs, IT services
-    and general supply.
-
-    Our commitment is to provide dependable,
-    practical and quality solutions to individuals,
-    businesses and institutions.
-  </p>
-
+ </div>
 </section>
 
-<!-- SERVICES -->
-
-<section class="services" id="services">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <p style="color:#0755ad;font-weight:bold">
-        WHAT WE DO
-      </p>
-
-      <h2>OUR PROFESSIONAL SERVICES</h2>
-
-      <span></span>
-
-    </div>
-
-    <div class="service-grid">
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=85"
-          alt="African engineering technician working in a workshop">
-
-        <div class="card-content">
-          <h3>GENERAL ENGINEERING</h3>
-
-          <p>
-            Engineering services, technical solutions
-            and maintenance for domestic, commercial
-            and industrial requirements.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=85"
-          alt="Mobile phone and electronics repair">
-
-        <div class="card-content">
-          <h3>PHONE & ELECTRONICS REPAIRS</h3>
-
-          <p>
-            Professional diagnosis, repair and
-            maintenance of mobile phones and
-            electronic devices.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=85"
-          alt="Computer and laptop technical services">
-
-        <div class="card-content">
-          <h3>COMPUTER REPAIRS</h3>
-
-          <p>
-            Computer and laptop troubleshooting,
-            hardware repairs, software installation
-            and maintenance.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=85"
-          alt="Television electronics">
-
-        <div class="card-content">
-          <h3>TELEVISION REPAIRS</h3>
-
-          <p>
-            Diagnosis and repair of televisions
-            and related electronic entertainment
-            equipment.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=85"
-          alt="CCTV surveillance camera installation">
-
-        <div class="card-content">
-          <h3>CCTV CAMERA INSTALLATION</h3>
-
-          <p>
-            Installation and configuration of
-            CCTV surveillance systems for homes,
-            offices and businesses.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=85"
-          alt="Electrical technician and equipment">
-
-        <div class="card-content">
-          <h3>ELECTRICAL APPLIANCE REPAIRS</h3>
-
-          <p>
-            Repair and maintenance of electrical
-            appliances and household equipment.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85"
-          alt="Information technology services">
-
-        <div class="card-content">
-          <h3>IT SERVICES</h3>
-
-          <p>
-            Information technology support,
-            computer systems, networking
-            and technical assistance.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85"
-          alt="Engineering workshop and technical work">
-
-        <div class="card-content">
-          <h3>TECHNICAL SERVICES</h3>
-
-          <p>
-            Practical technical support,
-            equipment maintenance and
-            engineering-related solutions.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img
-          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85"
-          alt="General supply and warehouse">
-
-        <div class="card-content">
-          <h3>GENERAL SUPPLY</h3>
-
-          <p>
-            Supply of products, materials,
-            equipment and other business
-            requirements.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- SUPPLY FEATURE -->
-
-    <div class="supply">
-
-      <img
-        src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1000&q=85"
-        alt="Engineering professional at work">
-
-      <div class="supply-text">
-
-        <h2>YOUR PARTNER IN ENGINEERING & TECHNOLOGY</h2>
-
-        <p>
-          At Kalemark Engineering Limited,
-          we believe in delivering practical
-          solutions through technical expertise,
-          professional service and commitment
-          to quality.
-        </p>
-
-        <p style="margin-top:15px">
-          We serve individuals, companies,
-          institutions and organisations
-          seeking reliable engineering
-          and technology services.
-        </p>
-
-        <a href="#contact" class="button">
-          CONTACT OUR TEAM
-        </a>
-
-      </div>
-
-    </div>
-
+<section class="section alt" id="services">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">What We Do</div>
+   <h2>Our Services</h2>
+   <p>A range of technical and supply services designed to support homes, organisations and businesses.</p>
   </div>
 
+  <div class="services-grid">
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Phone and electronics repair" loading="lazy">
+    <div class="service-body"><h3>Phone & Electronics Repairs</h3><p>Repair and troubleshooting support for mobile phones and selected electronic devices.</p></div>
+   </article>
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=900&q=80" alt="Computer equipment" loading="lazy">
+    <div class="service-body"><h3>Computer Repairs</h3><p>Computer diagnostics, software support, maintenance and hardware-related assistance.</p></div>
+   </article>
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80" alt="Television" loading="lazy">
+    <div class="service-body"><h3>Television Repairs</h3><p>Fault assessment and repair support for televisions and related home entertainment equipment.</p></div>
+   </article>
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1557597774-9d2736059010?auto=format&fit=crop&w=900&q=80" alt="CCTV security camera" loading="lazy">
+    <div class="service-body"><h3>CCTV Installation</h3><p>Security camera installation and setup to help improve visibility and protection of your premises.</p></div>
+   </article>
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80" alt="Electrical appliance repair" loading="lazy">
+    <div class="service-body"><h3>Electrical Appliance Repairs</h3><p>Repair and maintenance support for selected household and electrical appliances.</p></div>
+   </article>
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Technology circuit board" loading="lazy">
+    <div class="service-body"><h3>IT & Technical Services</h3><p>General IT assistance, technical troubleshooting and technology support for clients.</p></div>
+   </article>
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80" alt="Warehouse supplies" loading="lazy">
+    <div class="service-body"><h3>General Supply</h3><p>Sourcing and supply of a range of goods and materials to meet customer requirements.</p></div>
+   </article>
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80" alt="Engineering tools" loading="lazy">
+    <div class="service-body"><h3>General Engineering</h3><p>Practical engineering support and related technical solutions for varied client needs.</p></div>
+   </article>
+
+   <article class="service-card">
+    <img src="https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?auto=format&fit=crop&w=900&q=80" alt="Technical maintenance" loading="lazy">
+    <div class="service-body"><h3>Maintenance & Support</h3><p>Responsive maintenance assistance to help keep equipment and systems operating effectively.</p></div>
+   </article>
+
+  </div>
+ </div>
 </section>
 
-<!-- CONTACT -->
+<section class="commitment">
+ <div class="container commitment-inner">
+  <div>
+   <div class="eyebrow">Our Commitment</div>
+   <h2>Reliable solutions, delivered with care.</h2>
+   <p>We value professionalism, clear communication and lasting customer relationships. Our focus is to understand each client's needs and provide service they can trust.</p>
+  </div>
+  <a class="btn light" href="#contact">Request a Service</a>
+ </div>
+</section>
 
-<section class="contact container" id="contact">
+<section class="section">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">Why Choose Us</div>
+   <h2>Our Service Promise</h2>
+   <p>We aim to make every customer interaction straightforward, professional and dependable.</p>
+  </div>
+  <div class="values">
+   <div class="value"><h3>Quality</h3><p>We aim for careful workmanship and solutions that respond to the task at hand.</p></div>
+   <div class="value"><h3>Reliability</h3><p>We respect our commitments and work to provide responsive, dependable support.</p></div>
+   <div class="value"><h3>Customer Focus</h3><p>We listen to our clients and keep their needs at the centre of our service.</p></div>
+  </div>
+ </div>
+</section>
 
-  <div class="section-title">
+<section class="section alt" id="projects">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">A Look at Our Work</div>
+   <h2>Technical Work & Solutions</h2>
+   <p>Illustrative images representing the types of technical services and solutions we provide.</p>
+  </div>
+  <div class="gallery-grid">
+   <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80" alt="Engineering workshop" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Electrical installation" loading="lazy">
+   <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80" alt="Technical equipment" loading="lazy">
+  </div>
+ </div>
+</section>
 
-    <h2>GET IN TOUCH</h2>
-
-    <span></span>
-
-    <p>
-      We would be glad to hear from you.
-      Contact us for enquiries and service requests.
-    </p>
-
+<section class="section" id="contact">
+ <div class="container">
+  <div class="section-head">
+   <div class="eyebrow">Get in Touch</div>
+   <h2>Let's discuss what you need.</h2>
+   <p>Contact Kalemark Engineering Limited for service enquiries, quotations and general information.</p>
   </div>
 
   <div class="contact-grid">
-
-    <div class="contact-box">
-
-      <h3>OUR PHYSICAL ADDRESS</h3>
-
-      <p>
-        <strong>Kalemark Engineering Limited</strong>
-      </p>
-
-      <p>
-        Plot No. H/N 384, Ndeke Amis,<br>
-        Ndeke, Kitwe,<br>
-        Copperbelt Province,<br>
-        Zambia.
-      </p>
-
+   <div class="contact-info">
+    <h3>Contact Information</h3>
+    <p>We look forward to hearing from you.</p>
+    <div class="contact-line"><strong>Address</strong>Plot No. H/N 384, Ndeke Amis, Ndeke, Kitwe, Copperbelt Province, Zambia</div>
+    <div class="contact-line"><strong>Phone</strong>
+     <a href="tel:+26097993954">+260 979 93954</a><br>
+     <a href="tel:+2609556661810">+260 955 6661810</a><br>
+     <a href="tel:+260964724951">+260 964 724951</a>
     </div>
+    <div class="contact-line"><strong>Email</strong><a href="mailto:markkalembelembe@gmail.com">markkalembelembe@gmail.com</a></div>
+   </div>
 
-    <div class="contact-box">
-
-      <h3>CONTACT INFORMATION</h3>
-
-      <p>
-        <strong>Email:</strong><br>
-
-        <a href="mailto:markkalembelembe@gmail.com">
-          markkalembelembe@gmail.com
-        </a>
-      </p>
-
-      <p><strong>Mobile Numbers:</strong></p>
-
-      <p>
-        <a href="tel:+26097993954">
-          +260 97993954
-        </a>
-      </p>
-
-      <p>
-        <a href="tel:+2609556661810">
-          +260 9556661810
-        </a>
-      </p>
-
-      <p>
-        <a href="tel:+260964724951">
-          +260 964724951
-        </a>
-      </p>
-
-      <a
-        href="https://wa.me/26097993954"
-        class="whatsapp">
-        CHAT WITH US ON WHATSAPP
-      </a>
-
+   <form class="contact-form" id="contactForm">
+    <h3>Send an Enquiry</h3>
+    <p>Complete the form and your email app will open with your message ready to send.</p>
+    <div class="form-row">
+     <input id="name" type="text" placeholder="Your name" required>
+     <input id="email" type="email" placeholder="Your email address" required>
     </div>
-
+    <input id="subject" type="text" placeholder="Subject" required>
+    <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
+    <button class="btn" type="submit">Prepare Email</button>
+   </form>
   </div>
-
+ </div>
 </section>
 
-<!-- FOOTER -->
+</main>
 
 <footer>
-
-  <div class="container">
-
-    <img
-      src="kalemark-logo.png"
-      class="footer-logo"
-      alt="Kalemark Engineering Limited">
-
-    <h3>KALEMARK ENGINEERING LIMITED</h3>
-
-    <p>
-      Engineering | Electronics | Repairs |
-      CCTV | IT Services | General Supply
-    </p>
-
-    <p>
-      Kitwe, Copperbelt Province, Zambia.
-    </p>
-
-    <p>
-      Email: markkalembelembe@gmail.com
-    </p>
-
-    <p>
-      © 2026 Kalemark Engineering Limited.
-      All Rights Reserved.
-    </p>
-
-  </div>
-
+ <div class="container footer-inner">
+  <span>© <span id="year"></span> <strong>Kalemark Engineering Limited</strong>. All rights reserved.</span>
+  <span>Reliable Solutions • Quality Service • Customer Satisfaction</span>
+ </div>
 </footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mainNav=document.getElementById('mainNav');
+
+menuBtn.addEventListener('click',()=>{
+ const open=mainNav.classList.toggle('open');
+ menuBtn.setAttribute('aria-expanded',open?'true':'false');
+ menuBtn.textContent=open?'✕':'☰';
+});
+
+mainNav.querySelectorAll('a').forEach(link=>{
+ link.addEventListener('click',()=>{
+  mainNav.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  menuBtn.textContent='☰';
+ });
+});
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+document.getElementById('contactForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value.trim();
+ const email=document.getElementById('email').value.trim();
+ const subject=document.getElementById('subject').value.trim();
+ const message=document.getElementById('message').value.trim();
+ const body=`Name: ${name}\nEmail: ${email}\n\n${message}`;
+ window.location.href=`mailto:markkalembelembe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+</script>
 
 </body>
 </html>
